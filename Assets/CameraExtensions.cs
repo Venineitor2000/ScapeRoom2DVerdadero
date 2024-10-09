@@ -10,6 +10,7 @@ public static class CameraExtensions
             camera.transform.position,
             new Vector3(cameraHeight * screenAspect, cameraHeight, 0));
         return bounds;
+        
     }
 
 }

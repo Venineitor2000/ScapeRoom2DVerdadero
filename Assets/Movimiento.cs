@@ -16,7 +16,7 @@ public class Movimiento : MonoBehaviour
     [SerializeField] Transform limiteY1, limiteY2;
 
 
-    private void Start()
+    private void Awake()
     {
         m_Camera.m_Lens.OrthographicSize = Mathf.Lerp(maxZoom, minZoom, transform.position.y / ((Mathf.Abs(limiteY1.position.y) + Mathf.Abs(limiteY2.position.y)) / 2));
 
