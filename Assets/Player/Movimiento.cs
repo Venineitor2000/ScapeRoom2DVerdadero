@@ -12,7 +12,7 @@ public class Movimiento : MonoBehaviour
     [SerializeField] LayerMask layerPared;
     [SerializeField] float minZoom, maxZoom;
     [SerializeField] float speedZoom;
-
+    bool detenido;
     [SerializeField] Transform limiteY1, limiteY2;
 
 
@@ -24,6 +24,10 @@ public class Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (detenido)
+        {
+            return;
+        }
         //Movimiento horizontal
         RaycastHit2D rayX = Physics2D.Raycast(transform.position, new Vector3(Input.GetAxis("Horizontal"), 0, 0), distanciaRaycastParedesX, layerPared);
         if(!rayX)    
@@ -52,5 +56,15 @@ public class Movimiento : MonoBehaviour
         }
 
         
+    }
+
+    public void Detener()
+    {
+        detenido = true;
+    }
+
+    public void ReanudarMovimiento()
+    {
+        detenido = false;
     }
 }

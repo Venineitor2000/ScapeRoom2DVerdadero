@@ -21,7 +21,6 @@ public class AjustarTamañoManos : MonoBehaviour
     {
         // Calcula el factor de escala en base al cambio del tamaño de la cámara
         float scaleFactor = mainCamera.orthographicSize / initialSize;
-        Debug.Log(scaleFactor);
         // Ajusta la escala del sprite de forma inversa al tamaño de la cámara
         sprite.localScale = initialScale * scaleFactor;
     }
