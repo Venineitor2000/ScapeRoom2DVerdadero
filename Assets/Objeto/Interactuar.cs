@@ -54,7 +54,17 @@ public class Interactuar : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             if(Interactuable)
-            {                
+            {
+                Bounds spriteBounds = spriteRenderer.bounds;
+                float topY = spriteBounds.max.y;
+                //Creo el nuevo Vector tomando en cuenta X del transform y Y del sprite mas alto
+                Vector2 posicion = new Vector2(transform.position.x, topY);
+
+                RectTransform textoRectTransform = canvasInteractuar.transform.Find("Texto").GetComponent<RectTransform>();
+                Vector3 screenPosition = Camera.main.WorldToScreenPoint(posicion);
+                Vector2 localPoint;
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasInteractuar.GetComponent<RectTransform>(), screenPosition, canvasInteractuar.worldCamera, out localPoint);
+                textoRectTransform.anchoredPosition = new Vector2(localPoint.x, localPoint.y + distanciaTextoInteractuar);
                 canvasInteractuar.gameObject.SetActive(true);
             }
             
