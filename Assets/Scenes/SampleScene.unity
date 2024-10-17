@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 148334133}
-  tiempo: 5
+  tiempo: 500
   canvasDerota: {fileID: 1587069321}
 --- !u!1 &983800377
 GameObject:
@@ -1729,7 +1729,7 @@ MonoBehaviour:
   layerPared:
     serializedVersion: 2
     m_Bits: 8
-  minZoom: 3.6
+  minZoom: 2.25
   maxZoom: 4
   speedZoom: 3
   limiteY1: {fileID: 890889647}
@@ -1859,7 +1859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521412370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.02, z: 0}
+  m_LocalPosition: {x: 0, y: 6.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
