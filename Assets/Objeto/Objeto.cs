@@ -19,13 +19,13 @@ public class Objeto : MonoBehaviour
     {
         if (player.transform.position.y - distanciaDesaparecer > transform.position.y)
         {
-            spriteRenderer.enabled = false;
+            //spriteRenderer.enabled = false;
             interactuar.SetInteractuable(false);
         }
 
         else
         {
-            spriteRenderer.enabled = true;
+            //spriteRenderer.enabled = true;
             interactuar.SetInteractuable(true);
         }
     }
