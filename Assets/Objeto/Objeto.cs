@@ -29,4 +29,6 @@ public class Objeto : MonoBehaviour
             interactuar.SetInteractuable(true);
         }
     }
+
+    
 }
