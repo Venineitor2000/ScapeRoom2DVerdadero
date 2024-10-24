@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class SeguirTarget : MonoBehaviour
 {
     public SpriteRenderer finalCable;
     public Transform target;
     public SpriteRenderer puntaCable;
+    public bool left;
+    int valorLado;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(left)
+            valorLado = 1;
+        else valorLado = -1;
     }
 
     // Update is called once per frame
@@ -29,7 +33,7 @@ public class Target : MonoBehaviour
         Vector2 posicionActual = transform.position;
         Vector2 posicionOrigen = target.position;
         Vector2 direccion = posicionActual - posicionOrigen;
-        float angulo = Vector2.SignedAngle(Vector2.left * transform.lossyScale, direccion);
+        float angulo = Vector2.SignedAngle(Vector2.left * valorLado, direccion);
         transform.rotation = Quaternion.Euler(0, 0, angulo);
 
     }
@@ -37,7 +41,7 @@ public class Target : MonoBehaviour
     void ActualizarPosicionPuntaCable()
     {
         // Obtiene el tamaño actual del cable
-        float anchoCable = finalCable.size.x;
+        float anchoCable = finalCable.size.x * valorLado;
 
         // Calcula la nueva posición para la punta del cable en función de la rotación del cable
         Vector3 nuevaPosicionPunta = transform.position + transform.right * anchoCable ;
