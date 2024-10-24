@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 3105674643470186051}
   - component: {fileID: 8692982267250683084}
   m_Layer: 0
-  m_Name: Puzzle
+  m_Name: PadNumerico
   m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,7 +296,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3105674643470186063}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -328,13 +328,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: f615b6ba3722fd44eb8f6f90f638b7d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.84, y: 3.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -389,7 +389,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.84, y: 3.39}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 3.84, y: 3.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -413,7 +413,6 @@ MonoBehaviour:
   autoSelect: {fileID: 1699762331}
   animacionPuerta: {fileID: 0}
   input: {fileID: 7044922698147243404}
-  puzzleParent: {fileID: 3105674643470186061}
 --- !u!1 &3105674643574471938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1041,7 @@ MonoBehaviour:
   m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
-  m_RestoreOriginalTextOnEscape: 0
+  m_RestoreOriginalTextOnEscape: 1
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
   m_InputValidator: {fileID: 0}
