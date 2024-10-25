@@ -22,7 +22,7 @@ public class SeguirTarget : MonoBehaviour
     {
         
         float distancia = Vector2.Distance(transform.position, target.position);
-        finalCable.size = new Vector2(distancia, finalCable.size.y);
+        finalCable.size = new Vector2(distancia / Mathf.Abs(transform.parent.parent.localScale.x), finalCable.size.y);
         ActualizarRotacion();
         // Actualiza la posición de la punta del cable
         ActualizarPosicionPuntaCable();
@@ -41,10 +41,10 @@ public class SeguirTarget : MonoBehaviour
     void ActualizarPosicionPuntaCable()
     {
         // Obtiene el tamaño actual del cable
-        float anchoCable = finalCable.size.x * valorLado;
+        float anchoCable = finalCable.size.x * valorLado ;
 
         // Calcula la nueva posición para la punta del cable en función de la rotación del cable
-        Vector3 nuevaPosicionPunta = transform.position + transform.right * anchoCable ;
+        Vector3 nuevaPosicionPunta = transform.position + transform.right * anchoCable * Mathf.Abs(transform.parent.parent.localScale.x);
 
         // Asigna la posición calculada a la punta del cable
         puntaCable.transform.position = nuevaPosicionPunta;

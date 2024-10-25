@@ -8,6 +8,7 @@ public class MoverTarget : MonoBehaviour
     [SerializeField]MoverTarget compañero;
     bool conectadoACompañero;
     bool conectado;
+    [SerializeField] GameObject luz;
     private void Start()
     {
         posicionInicial = transform.position;
@@ -26,8 +27,7 @@ public class MoverTarget : MonoBehaviour
         if (conectadoACompañero)
         {
             transform.position = compañero.posicionInicial;
-            conectado = true;
-            compañero.conectado = true;
+            Conectado();
         }
         else
             transform.position = posicionInicial;
@@ -67,5 +67,12 @@ public class MoverTarget : MonoBehaviour
         }
     }
 
+    void Conectado()
+    {
+        conectado = true;
+        compañero.conectado = true;
+        luz.SetActive(true);
+        compañero.luz.SetActive(true);
+    }
   
 }

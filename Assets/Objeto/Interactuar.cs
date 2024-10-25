@@ -6,16 +6,20 @@ public class Interactuar : MonoBehaviour
 {
     [SerializeField] Canvas canvasInteractuar;
     [SerializeField] SpriteRenderer spriteRenderer;
-    Canvas canvasObjeto;
+    Canvas canvasObjeto;//Si tenes este se basa en canvas
+    public GameObject objeto;//Si tenes este es por que el puzzle se basa en sprites
     GameObject player;
     bool playerDentroDeTrigger;
     bool Interactuable = true;
     bool canvasObjetoAbierto;
     [SerializeField] float distanciaTextoInteractuar = 100;
+    
     // Start is called before the first frame update
     void Start()
     {
-        canvasObjeto = GetComponentInChildren<Canvas>(true);
+            if(objeto == null)
+                canvasObjeto = GetComponentInChildren<Canvas>(true);
+        
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -25,25 +29,39 @@ public class Interactuar : MonoBehaviour
     {
         if(!canvasObjetoAbierto)
         {
+            
             canvasObjetoAbierto = true;
+            
             canvasInteractuar.gameObject.SetActive(false);
-            canvasObjeto.gameObject.SetActive(true);
+            if (objeto == null)
+                canvasObjeto.gameObject.SetActive(true);
+            if(objeto != null) 
+                objeto.SetActive(true);
             player.GetComponent<Movimiento>().Detener();
 
-            
-            RectTransform contenedorRectTransform = canvasObjeto.transform.Find("Contenedor").GetComponent<RectTransform>();
-            Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-            Vector2 localPoint;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasObjeto.GetComponent<RectTransform>(), screenPosition, canvasObjeto.worldCamera, out localPoint);
-            contenedorRectTransform.anchoredPosition = new Vector2(localPoint.x, contenedorRectTransform.anchoredPosition.y);
+            if(objeto == null)
+            {
+                RectTransform contenedorRectTransform = canvasObjeto.transform.Find("Contenedor").GetComponent<RectTransform>();
+                Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+                Vector2 localPoint;
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasObjeto.GetComponent<RectTransform>(), screenPosition, canvasObjeto.worldCamera, out localPoint);
+                contenedorRectTransform.anchoredPosition = new Vector2(localPoint.x, contenedorRectTransform.anchoredPosition.y);
+
+            }
+
+            player.GetComponent<OcultarManosPuzzle>().Ocultar();
         }
 
         else
         {
             canvasObjetoAbierto = false;
             canvasInteractuar.gameObject.SetActive(true);
-            canvasObjeto.gameObject.SetActive(false);
+            if(objeto == null)
+                canvasObjeto.gameObject.SetActive(false);
+            if(objeto != null)
+                objeto.SetActive(false );
             player.GetComponent<Movimiento>().ReanudarMovimiento();
+            player.GetComponent<OcultarManosPuzzle>().Desocultar();
         }
     }
 

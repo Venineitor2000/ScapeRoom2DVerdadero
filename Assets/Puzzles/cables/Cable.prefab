@@ -72,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "compa\xF1ero": {fileID: 0}
+  luz: {fileID: 0}
 --- !u!50 &6399519732963640574
 Rigidbody2D:
   serializedVersion: 4
@@ -163,7 +164,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 21
   m_Sprite: {fileID: 4196934361519511998, guid: acff6086e56e46f40aa177d85aa8a75d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -246,7 +247,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 22
   m_Sprite: {fileID: -8534190835392898786, guid: acff6086e56e46f40aa177d85aa8a75d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -344,7 +345,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 22
   m_Sprite: {fileID: 8685669346120724543, guid: acff6086e56e46f40aa177d85aa8a75d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
