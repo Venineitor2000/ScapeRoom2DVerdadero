@@ -7,7 +7,7 @@ public class MoverTarget : MonoBehaviour
     Vector3 posicionInicial;
     [SerializeField]MoverTarget compañero;
     bool conectadoACompañero;
-    bool conectado;
+    public bool conectado;
     [SerializeField] GameObject luz;
     private void Start()
     {

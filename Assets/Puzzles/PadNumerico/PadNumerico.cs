@@ -9,8 +9,21 @@ public class PadNumerico : MonoBehaviour
     [SerializeField] AutoSelectPad autoSelect;
     [SerializeField] GameObject animacionPuerta;
     [SerializeField] TMP_InputField input;
+    bool desactivado;
+    private void Update()
+    {
+        if(CableCompletado.ganado)
+        {
+            input.gameObject.SetActive(true);
+            ActivarInput();
+        }
+            
+        else
+        {
+            input.gameObject.SetActive(false);
+        }
+    }
 
-    
     public void Interactuar()
     {
         if (Timer.derrota)
@@ -28,11 +41,17 @@ public class PadNumerico : MonoBehaviour
 
             else
             {
-                input.Select();
-                input.ActivateInputField();
+                //input.Select();
+                //input.ActivateInputField();
                 input.text = "";
             }
         
+    }
+
+    void ActivarInput()
+    {
+        input.Select();
+        input.ActivateInputField();
     }
 
     bool Validar()
