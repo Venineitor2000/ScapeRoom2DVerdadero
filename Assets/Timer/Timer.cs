@@ -6,9 +6,15 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textMeshPro;
     [SerializeField] float tiempo;
+    public float tiempoAlIniciar;//Esto solo es para usarlo en otro script no le des un valor
     [SerializeField] GameObject canvasDerota;
     public static bool derrota;
     public static bool victoria;
+
+    private void Awake()
+    {
+        tiempoAlIniciar = tiempo;
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,5 +37,10 @@ public class Timer : MonoBehaviour
             derrota = true;
             canvasDerota.SetActive(true);
         }
+    }
+
+    public float GetTime()
+    {
+        return tiempo;
     }
 }
