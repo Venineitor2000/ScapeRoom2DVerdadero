@@ -5882,7 +5882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8692982267250683084, guid: 353df2ab026cca94aa35c90034dab301, type: 3}
       propertyPath: valor
-      value: 141
+      value: 1411
       objectReference: {fileID: 0}
     - target: {fileID: 8692982267250683084, guid: 353df2ab026cca94aa35c90034dab301, type: 3}
       propertyPath: animacionPuerta
