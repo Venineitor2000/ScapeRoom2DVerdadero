@@ -9,7 +9,7 @@ public class MoverTarget : MonoBehaviour
     bool conectadoACompañero;
     public bool conectado;
     [SerializeField] GameObject luz;
-    private void Start()
+    private void Awake()
     {
         posicionInicial = transform.position;
     }
