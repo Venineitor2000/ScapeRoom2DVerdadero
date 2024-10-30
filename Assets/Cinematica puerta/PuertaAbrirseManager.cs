@@ -5,10 +5,18 @@ using UnityEngine.SceneManagement;
 public class PuertaAbrirseManager : MonoBehaviour
 {
     public int numeroEscena;
+    public bool lvl2;
     private void Awake()
     {
+        if(!lvl2)
+        {
             DontDestroyOnLoad(gameObject);
             StartCoroutine(LoadYourAsyncScene());
+        }
+        else
+        {
+
+        }
     }
 
 
