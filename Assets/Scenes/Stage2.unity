@@ -883,7 +883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 1dfc34bcaf394964e953b8ad0e7a94cf, type: 3}
+  m_Texture: {fileID: 2800000, guid: 8bae64f5f64f55243867c117ddc9ea0f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1573,7 +1573,7 @@ MonoBehaviour:
   perrillaBasura: 0
   estadoCorrecto: 0
   estadoCorrecto2: 28
-  luz: {fileID: 1826181021}
+  luz: {fileID: 28659651}
   perillaAnterior: {fileID: 858010066}
   duracion: 1
 --- !u!114 &218913582
@@ -3038,6 +3038,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463703407}
   m_CullTransparentMesh: 1
+--- !u!114 &481351694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 445990950631442156, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
+  m_PrefabInstance: {fileID: 7892230252197915154}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f295a9eaba12f7246aa2c20e9ac48ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3850,6 +3861,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4884c4ccdb5c5ec4b9b8fb8304d52005, type: 3}
+--- !u!1 &704612925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 704612927}
+  - component: {fileID: 704612926}
+  m_Layer: 0
+  m_Name: VICTORIA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &704612926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704612925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672b7ab53c8db604282377738b2d1761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &704612927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704612925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1626.9839, y: 925.7659, z: -141.31772}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &704670506
 GameObject:
   m_ObjectHideFlags: 0
@@ -4757,7 +4811,7 @@ MonoBehaviour:
   perrillaBasura: 0
   estadoCorrecto: 0
   estadoCorrecto2: 28
-  luz: {fileID: 729604226}
+  luz: {fileID: 1826181021}
   perillaAnterior: {fileID: 218913581}
   duracion: 1
 --- !u!114 &880442322
@@ -5147,7 +5201,19 @@ MonoBehaviour:
   video: {fileID: 1123122728}
   OnVideoTerminoPrimeraVez:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 704612925}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &947991735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5163,7 +5229,7 @@ MonoBehaviour:
   rawImageVideo: {fileID: 1381660033}
   rawImageFirstFrame: {fileID: 46989768}
   videoPlayer: {fileID: 1123122728}
-  delayBeforeShowing: 0.05
+  delayBeforeShowing: 0.1
   puertaAbrirseManager: {fileID: 1102390720}
 --- !u!114 &947991736
 MonoBehaviour:
@@ -5224,7 +5290,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 50
   m_TargetDisplay: 0
 --- !u!1 &958316294
 GameObject:
@@ -5620,7 +5686,6 @@ GameObject:
   - component: {fileID: 983800380}
   - component: {fileID: 983800379}
   - component: {fileID: 983800378}
-  - component: {fileID: 983800381}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -5686,19 +5751,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &983800381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983800377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 105692f35f953e34880e05518efb103d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjetoInteractuablePuerta: {fileID: 0}
 --- !u!1 &1006638908
 GameObject:
   m_ObjectHideFlags: 0
@@ -6355,7 +6407,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123122726}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 62d19fc324294fa41b3fb3d581332111, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: b31c3d68894def34aafb5ef6686ef528, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -7683,7 +7735,7 @@ MonoBehaviour:
   perrillaBasura: 0
   estadoCorrecto: 0
   estadoCorrecto2: 28
-  luz: {fileID: 28659651}
+  luz: {fileID: 729604226}
   perillaAnterior: {fileID: 880442321}
   duracion: 1
 --- !u!114 &1470206716
@@ -11756,18 +11808,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 498054295493371520, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307449527859335113, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1523756857744033492, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1504083533}
-    - target: {fileID: 1523756857744033493, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
-      propertyPath: m_Size.y
-      value: 4.1747675
-      objectReference: {fileID: 0}
-    - target: {fileID: 1523756857744033493, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
-      propertyPath: m_Offset.y
-      value: 2.3518271
-      objectReference: {fileID: 0}
     - target: {fileID: 1523756857744033494, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
       propertyPath: canvasInteractuar
       value: 
@@ -11820,13 +11872,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1523756857849400724, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5088864423957978202, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
-      propertyPath: animacionPuerta
+    - target: {fileID: 6915415446572979482, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1102390719}
+      objectReference: {fileID: 481351694}
+    - target: {fileID: 6915415446572979482, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Interactuar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915415446572979482, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pad2, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dd96e0947c53c640a6b06a362d612c1, type: 3}

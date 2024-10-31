@@ -36,13 +36,15 @@ public class Perilla : MonoBehaviour
         transform.DORotate(new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, estadoActual * rangoRotacion), duracion).OnComplete(() =>
         {
             rotando = false;
-            Valdiar();
+            
         });
 
         
     }
 
-    void Valdiar()
+    
+
+    public void Valdiar()
     {
         if (perrillaBasura)
             return;
@@ -70,6 +72,9 @@ public class Perilla : MonoBehaviour
         }
         while (estadoActual == estadoCorrecto || estadoActual == estadoCorrecto2); // Repite si es igual a estadoCorrecto 1 o 2
     }
-
+    private void Update()
+    {
+        Valdiar();
+    }
 
 }

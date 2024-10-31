@@ -34,9 +34,9 @@ public class PadNumerico : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Player").SetActive(false);
             foreach (var item in GameObject.FindGameObjectsWithTag("Interactuable"))
             {
+
                 item.gameObject.SetActive(false);
             }
-            Timer.victoria = true;
             }
 
             else

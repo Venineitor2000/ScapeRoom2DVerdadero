@@ -60,8 +60,12 @@ public class Interactuar : MonoBehaviour
                 canvasObjeto.gameObject.SetActive(false);
             if(objeto != null)
                 objeto.SetActive(false );
-            player.GetComponent<Movimiento>().ReanudarMovimiento();
-            player.GetComponent<OcultarManosPuzzle>().Desocultar();
+            if(player != null)
+            {
+                player.GetComponent<Movimiento>().ReanudarMovimiento();
+                player.GetComponent<OcultarManosPuzzle>().Desocultar();
+            }
+            
         }
     }
 

@@ -65,7 +65,6 @@ GameObject:
   - component: {fileID: 1523756857744033492}
   - component: {fileID: 1523756857744033494}
   - component: {fileID: 1523756857744033493}
-  - component: {fileID: 5088864423957978202}
   - component: {fileID: 445990950631442156}
   - component: {fileID: 4484717077523096756}
   m_Layer: 2
@@ -186,7 +185,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02615118, y: 1.4474723}
+  m_Offset: {x: 0.02615118, y: 2.3518271}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -197,24 +196,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.9812517, y: 2.9431653}
+  m_Size: {x: 3.9812517, y: 4.1747675}
   m_EdgeRadius: 0
---- !u!114 &5088864423957978202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523756857744033497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 065140a807d2db54399f3e907a923853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valor: 1411
-  autoSelect: {fileID: 4484717077043355661}
-  animacionPuerta: {fileID: 0}
-  input: {fileID: 6915415446572979482}
 --- !u!114 &445990950631442156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,7 +329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1523756857849400725
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1072,7 +1055,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5088864423957978202}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PadNumerico, Assembly-CSharp
         m_MethodName: Interactuar
         m_Mode: 1

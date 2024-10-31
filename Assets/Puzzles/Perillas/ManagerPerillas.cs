@@ -10,7 +10,7 @@ public class ManagerPerillas : MonoBehaviour
     float duracion = 1f; // Duración del desplazamiento en segundos
     float distancia = 2000f; // Distancia que se moverá hacia arriba
     bool a, b;
-    static public bool terminado = false;
+    static public bool terminado;
     // Start is called before the first frame update
     void Start()
     {
