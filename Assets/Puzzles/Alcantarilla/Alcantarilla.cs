@@ -9,9 +9,12 @@ public class Alcantarilla : MonoBehaviour
     public GameObject foto1, foto2;
     public GameObject manija;
     public static bool terminado;
+    bool a;
+    public AudioSource audioObjeto;
     private void OnEnable()
     {
-        if(Pad2.terminado)
+        Sonar();
+        if (Pad2.terminado)
         {
             foto1.SetActive(false);
             foto2.SetActive(true);
@@ -24,5 +27,16 @@ public class Alcantarilla : MonoBehaviour
     {
         manija.SetActive(false);
         terminado = true;
+    }
+
+    
+    private void Sonar()
+    {
+        if (!a)
+        {
+            a = true;
+            audioObjeto.Play();
+        }
+
     }
 }

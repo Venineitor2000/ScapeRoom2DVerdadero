@@ -15,7 +15,7 @@ public class PuertaAbrirseManager : MonoBehaviour
         }
         else
         {
-
+            Timer.pausa = true;
         }
     }
 

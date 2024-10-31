@@ -24,7 +24,6 @@ public class Gas : MonoBehaviour
         if (opacidad > opacidadMax)
             opacidad = opacidadMax;
         color.a = (byte)(opacidad * 255);
-        Debug.Log(opacidad);
         video.color = color;
     }
 }

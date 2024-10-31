@@ -10,6 +10,7 @@ public class VideoTermino2 : MonoBehaviour
     [SerializeField] VideoPlayer video;
     public UnityEvent OnVideoTerminoPrimeraVez;
     public static bool terminoPrimeraVez; //Usala para activar todo en la nueva escena
+    public bool lvl1;
     private void Awake()
     {
         if (terminoPrimeraVez)
@@ -26,9 +27,17 @@ public class VideoTermino2 : MonoBehaviour
         if (terminoPrimeraVez)
             return;
         terminoPrimeraVez = true;
+        if(lvl1)
+            Timer.pausa = false;
         OnVideoTerminoPrimeraVez.Invoke();
         video.loopPointReached -= VideoTerminoPrimeraVez;
-        Destroy(puertaAbrirseManager.gameObject);
-        gameObject.SetActive(false);
+        if (lvl1)
+        {
+            Destroy(puertaAbrirseManager.gameObject);
+            if (gameObject != null)
+                gameObject.SetActive(false);
+        }
+        
+            
     }
 }

@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField] GameObject canvasDerota;
     public static bool derrota;
     public static bool victoria;
-
+    public static bool pausa;
     private void Awake()
     {
         tiempoAlIniciar = tiempo;
@@ -19,6 +19,8 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (pausa)
+            return;
         if (victoria)
             return;
         if(tiempo > 0)
@@ -43,4 +45,6 @@ public class Timer : MonoBehaviour
     {
         return tiempo;
     }
+
+    
 }

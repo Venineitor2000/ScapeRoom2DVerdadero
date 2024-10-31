@@ -10,10 +10,12 @@ public class IniciarVideo2 : MonoBehaviour
     public VideoPlayer videoPlayer;
     public float delayBeforeShowing = 0.05f;
     public PuertaAbrirseManager puertaAbrirseManager;
-
+    public bool lvl1;
     private void Awake()
     {
         puertaAbrirseManager.gameObject.SetActive(true);
+        if (lvl1)
+            Timer.pausa = true;
     }
     void Start()
     {

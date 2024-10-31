@@ -10,4 +10,6 @@ public class Victoria : MonoBehaviour
         GameObject.FindGameObjectWithTag("Destruir").GetComponent<DestruirDontDestroy>().Destruir();
         SceneManager.LoadScene(0);
     }
+
+    
 }

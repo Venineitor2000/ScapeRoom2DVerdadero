@@ -9,7 +9,7 @@ public class VideoTermino : MonoBehaviour
     public IntroManager introManager;
     [SerializeField] VideoPlayer video;
     public UnityEvent OnVideoTerminoPrimeraVez;
-    static bool terminoPrimeraVez;
+    public static bool terminoPrimeraVez;
     private void Awake()
     {
         if (terminoPrimeraVez)
