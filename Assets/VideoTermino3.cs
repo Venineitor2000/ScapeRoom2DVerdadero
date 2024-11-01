@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Video;
 
-public class VideoTermino2 : MonoBehaviour
+public class VideoTermino3 : MonoBehaviour
 {
     public PuertaAbrirseManager puertaAbrirseManager;
     [SerializeField] VideoPlayer video;
@@ -14,7 +14,7 @@ public class VideoTermino2 : MonoBehaviour
     public Victoria victoria;
     private void Awake()
     {
-        
+
         if (terminoPrimeraVez)
         {
             OnVideoTerminoPrimeraVez.Invoke();
@@ -29,7 +29,7 @@ public class VideoTermino2 : MonoBehaviour
         if (terminoPrimeraVez)
             return;
         terminoPrimeraVez = true;
-        if(lvl1)
+        if (lvl1)
             Timer.pausa = false;
         OnVideoTerminoPrimeraVez.Invoke();
         video.loopPointReached -= VideoTerminoPrimeraVez;
@@ -44,7 +44,7 @@ public class VideoTermino2 : MonoBehaviour
         {
             victoria.gameObject.SetActive(true);
         }
-        
-            
+
+
     }
 }

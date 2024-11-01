@@ -9,6 +9,7 @@ public class ReiniciarStatics : MonoBehaviour
     {
         VideoTermino.terminoPrimeraVez = false;
         VideoTermino2.terminoPrimeraVez = false;
+        VideoTermino3.terminoPrimeraVez = false;
         Timer.derrota = false;
         Timer.victoria = false;
         Timer.pausa = false;

@@ -22,6 +22,7 @@ public class DestruirDontDestroy : MonoBehaviour
     public void Destruir()
     {
         foreach (GameObject obj in objects) {
+            if(obj != null) 
             Destroy(obj);
         }
         

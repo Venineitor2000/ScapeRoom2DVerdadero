@@ -20,7 +20,7 @@ public class Interactuar : MonoBehaviour
             if(objeto == null)
                 canvasObjeto = GetComponentInChildren<Canvas>(true);
         
-        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     
@@ -37,6 +37,7 @@ public class Interactuar : MonoBehaviour
                 canvasObjeto.gameObject.SetActive(true);
             if(objeto != null) 
                 objeto.SetActive(true);
+            player = GameObject.FindGameObjectWithTag("Player");
             player.GetComponent<Movimiento>().Detener();
 
             if(objeto == null)
