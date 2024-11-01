@@ -7,6 +7,7 @@ public class ReiniciarStatics : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SonidosManager.AudiosReproduciendose = true;
         VideoTermino.terminoPrimeraVez = false;
         VideoTermino2.terminoPrimeraVez = false;
         VideoTermino3.terminoPrimeraVez = false;
