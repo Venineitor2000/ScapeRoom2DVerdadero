@@ -10,6 +10,7 @@ public class Alcantarilla : MonoBehaviour
     public GameObject manija;
     public static bool terminado;
     bool a;
+    bool b;
     public AudioSource audioObjeto;
     private void OnEnable()
     {
@@ -36,7 +37,17 @@ public class Alcantarilla : MonoBehaviour
         {
             a = true;
             audioObjeto.Play();
+            SonidosManager.AudiosReproduciendose = true;
         }
 
+    }
+
+    private void Update()
+    {
+        if (a && !audioObjeto.isPlaying && !b)
+        {
+            SonidosManager.AudiosReproduciendose = false;
+            b = true;
+        }
     }
 }

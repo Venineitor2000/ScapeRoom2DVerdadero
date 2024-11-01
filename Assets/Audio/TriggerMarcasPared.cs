@@ -6,7 +6,7 @@ public class TriggerMarcasPared : MonoBehaviour
 {
     public AudioSource audioPared;
     bool a;
-
+    bool b;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -16,8 +16,19 @@ public class TriggerMarcasPared : MonoBehaviour
             {
                 audioPared.enabled = true;
                 a = true;
+                SonidosManager.AudiosReproduciendose = true;
             }
             
         }
+    }
+
+    private void Update()
+    {
+        if (a && !audioPared.isPlaying && !b)
+        {
+            SonidosManager.AudiosReproduciendose = false;
+            b = true;
+        }
+            
     }
 }

@@ -32,6 +32,9 @@ public class SonidosManager : MonoBehaviour
             timer += Time.deltaTime;
             if(timer == tiempoEjecucionActual)
             {
+                float PosX = Random.Range(-18f, 18f);
+                float PosY = Random.Range(-5.5f, 10f);
+                transform.position = new Vector2(PosX, PosY);
                 tiempoEjecucionActual = Random.Range(tiempoEjecucionMin,tiempoEjecucionMax);
                 timer = 0;
                 audio2.clip = ElegirAudio();

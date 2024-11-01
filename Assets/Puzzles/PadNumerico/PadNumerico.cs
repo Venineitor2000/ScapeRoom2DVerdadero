@@ -10,6 +10,8 @@ public class PadNumerico : MonoBehaviour
     [SerializeField] GameObject animacionPuerta;
     [SerializeField] TMP_InputField input;
     bool desactivado;
+    public AudioSource audioError;
+    
     private void Update()
     {
         if(CableCompletado.ganado)
@@ -44,6 +46,7 @@ public class PadNumerico : MonoBehaviour
                 //input.Select();
                 //input.ActivateInputField();
                 input.text = "";
+                audioError.Play();
             }
         
     }

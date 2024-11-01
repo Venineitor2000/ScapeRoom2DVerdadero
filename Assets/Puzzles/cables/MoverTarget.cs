@@ -9,9 +9,11 @@ public class MoverTarget : MonoBehaviour
     bool conectadoACompañero;
     public bool conectado;
     [SerializeField] GameObject luz;
+    AudioSource audio2;
     private void Awake()
     {
         posicionInicial = transform.position;
+        audio2 = GetComponent<AudioSource>();
     }
     private void OnMouseDrag()
     {
@@ -50,6 +52,7 @@ public class MoverTarget : MonoBehaviour
             }
             else
             {
+                
                 conectadoACompañero = false;
             }
         }
@@ -69,6 +72,7 @@ public class MoverTarget : MonoBehaviour
 
     void Conectado()
     {
+        audio2.Play();
         conectado = true;
         compañero.conectado = true;
         luz.SetActive(true);

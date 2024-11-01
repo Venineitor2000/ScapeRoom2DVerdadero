@@ -58,6 +58,7 @@ public class TriggerPuerta : MonoBehaviour
     void audioPostPuerta2()
     {
         audioPostPuerta.enabled = true;
-        
+        SonidosManager.AudiosReproduciendose = false;
+
     }
 }

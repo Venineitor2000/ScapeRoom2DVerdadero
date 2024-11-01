@@ -6,13 +6,19 @@ using UnityEngine.SceneManagement;
 public class Derrota : MonoBehaviour
 {
     public List<AudioClip> audios;
+    public AudioClip audioMuerte;
     public AudioSource audiosource;
-    bool a = true;
+    bool a;
+    bool b;
     private void Start()
     {
-        int r = Random.Range(0, audios.Count);
-        audiosource.clip = audios[r];
+        audiosource.clip = audioMuerte;
         audiosource.Play();
+        a = true;
+        
+
+
+        
 
 
          
@@ -20,9 +26,16 @@ public class Derrota : MonoBehaviour
 
     private void Update()
     {
-        if (a && !audiosource.isPlaying)
+        if (!audiosource.isPlaying && a)
         {
-            a = false;
+            int r = Random.Range(0, audios.Count);
+            audiosource.clip = audios[r];
+            audiosource.Play();
+            b = true;
+        }
+        if (b && !audiosource.isPlaying)
+        {
+            b = false;
             Invoke("Reiniciar", 0.5f);
         }
     }

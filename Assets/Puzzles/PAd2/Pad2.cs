@@ -9,10 +9,12 @@ public class Pad2 : MonoBehaviour
     [SerializeField] AutoSelectPad autoSelect;
     [SerializeField] GameObject animacionPuerta;
     [SerializeField] TMP_InputField input;
+    public AudioSource audio2, audioError;
     bool desactivado;
     public static bool terminado; 
     private void Update()
     {
+        if(terminado) return;
         if (ManagerPerillas.terminado)
         {
             input.gameObject.SetActive(true);
@@ -32,12 +34,15 @@ public class Pad2 : MonoBehaviour
         if (Validar())
         {
             terminado = true;
+            audio2.Play();
+            input.gameObject.SetActive(false);
         }
 
         else
         {
             //input.Select();
             //input.ActivateInputField();
+            audioError.Play();
             input.text = "";
         }
 

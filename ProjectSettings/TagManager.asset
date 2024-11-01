@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactuable
   - Destruir
+  - Musica
   layers:
   - Default
   - TransparentFX
