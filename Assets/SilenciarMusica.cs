@@ -10,12 +10,14 @@ public class SilenciarMusica : MonoBehaviour
     {
         if(silenciar )
         GameObject.FindGameObjectWithTag("Musica").GetComponent<AudioSource>().volume = 0;
+        SonidosManager.AudiosReproduciendose = true;
     }
 
     public void Reanudar()
     {
         if (reanudar)        
         GameObject.FindGameObjectWithTag("Musica").GetComponent<AudioSource>().volume = 0.3f;
+        SonidosManager.AudiosReproduciendose = false;
     }
 
     private void OnEnable()

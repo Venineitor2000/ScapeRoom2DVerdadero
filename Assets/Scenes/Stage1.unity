@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &10695219
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1642,7 +1642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &409532365
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1773,12 +1773,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4aa9504ff3bce93428f83e697874754d, type: 3}
   - {fileID: 8300000, guid: e6f0539a062bd1c469b8a004744165af, type: 3}
   - {fileID: 8300000, guid: 65c9e5a0d337739458ca50665237aa1a, type: 3}
-  tiempoEjecucionMin: 20
-  tiempoEjecucionMax: 60
+  tiempoEjecucionMin: 15
+  tiempoEjecucionMax: 30
   IA:
   - {fileID: 8300000, guid: da6732b85309d6d41a977d6ede63b1a3, type: 3}
   - {fileID: 8300000, guid: 08a158b7273194342b3305508f66ebca, type: 3}
   - {fileID: 8300000, guid: b52620df58a592c43a37b7f8510ef0ff, type: 3}
+  Tos:
+  - {fileID: 8300000, guid: 65c9e5a0d337739458ca50665237aa1a, type: 3}
+  - {fileID: 8300000, guid: 4aa9504ff3bce93428f83e697874754d, type: 3}
+  - {fileID: 8300000, guid: e6f0539a062bd1c469b8a004744165af, type: 3}
+  - {fileID: 8300000, guid: 8e19185c6e4f1134a87e32449dacd206, type: 3}
 --- !u!114 &409532367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2349,7 +2354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &674015068
 Transform:
   m_ObjectHideFlags: 0
@@ -5585,7 +5590,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5688,6 +5693,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8b9cb2e51ca608e428c21d6d803197f4, type: 3}
   audioMuerte: {fileID: 8300000, guid: 8efdbe302e8d3c545ba189e3babd09c2, type: 3}
   audiosource: {fileID: 1587069326}
+  canvas: {fileID: 10695218}
 --- !u!1 &1625920492
 GameObject:
   m_ObjectHideFlags: 0
@@ -5746,7 +5752,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -13,6 +13,9 @@ public class SonidosManager : MonoBehaviour
     public float tiempoEjecucionMin, tiempoEjecucionMax;
     float tiempoEjecucionActual;
     public List<AudioClip> IA;
+    public List<AudioClip> Tos;
+    bool audioEnElLugar;
+    bool a;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +25,18 @@ public class SonidosManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(AudiosReproduciendose && audio2.isPlaying)
+        if (AudiosReproduciendose && audio2.isPlaying)
         {
             audio2.Stop();
+            a = false;
+            audioEnElLugar = false;
+            audio2.spatialBlend = 1f;
         }
 
         else  if(!AudiosReproduciendose && !audio2.isPlaying) 
         {
             timer += Time.deltaTime;
-            if(timer == tiempoEjecucionActual)
+            if(timer >= tiempoEjecucionActual)
             {
                 float PosX = Random.Range(-18f, 18f);
                 float PosY = Random.Range(-5.5f, 10f);
@@ -38,8 +44,23 @@ public class SonidosManager : MonoBehaviour
                 tiempoEjecucionActual = Random.Range(tiempoEjecucionMin,tiempoEjecucionMax);
                 timer = 0;
                 audio2.clip = ElegirAudio();
+                
                 audio2.Play();
+                if (audioEnElLugar)
+                {
+                    a = true;
+                    audioEnElLugar = false;
+                    audio2.spatialBlend = 0f;
+                }
+                    
             }
+        }
+
+        if (a && !audio2.isPlaying)
+        {
+            //Termino el audio asi q volvemos al 3d
+            a = false;
+            audio2.spatialBlend = 1f;
         }
     }
 
@@ -62,7 +83,13 @@ public class SonidosManager : MonoBehaviour
         // Agregamos el audio seleccionado a la cola de audios usados
         audiosUsados.Enqueue(audioSeleccionado);
         if(IA.Contains(audioSeleccionado))
+        {
             audioClipList.Remove(audioSeleccionado);
+        }
+        if (IA.Contains(audioSeleccionado) || Tos.Contains(audioSeleccionado))
+        {
+            audioEnElLugar = true;
+        }
         return audioSeleccionado;
     }
 }
